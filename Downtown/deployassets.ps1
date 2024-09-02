@@ -22,8 +22,9 @@ if(-not (Test-Path $filePath))
 
 $config = Get-Content -Path $filePath | ConvertFrom-Yaml
 $SystemGuid = $config.SystemGuid
+$Profile = $config.Profile
 
 # This script copies the tenancy configuration data to the S3 bucket holding the tenancy configuration 
 # in the folder wwwroot/_content/Tenancy. 
-aws s3 cp wwwroot s3://config-$TenancyName-$SystemGuid/wwwroot/_content/Tenancy --recursive --profile lzm-dev
+aws s3 cp wwwroot s3://config-$TenancyName-$SystemGuid/wwwroot/_content/Tenancy --recursive --profile $Profile
  

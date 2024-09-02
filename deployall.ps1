@@ -18,9 +18,10 @@ if(-not (Test-Path $filePath))
 
 $config = Get-Content -Path $filePath | ConvertFrom-Yaml
 $SystemGuid = $config.SystemGuid
+$Profile = $config.Profile
 
-aws s3 cp Admin/wwwroot s3://config-admin-$SystemGuid/wwwroot/_content/Tenancy --recursive --profile lzm-dev
-aws s3 cp Consumer/wwwroot s3://config-consumer-$SystemGuid/wwwroot/_content/Tenancy --recursive --profile lzm-dev
-aws s3 cp Downtown/wwwroot s3://config-downtown-$SystemGuid/wwwroot/_content/Tenancy --recursive --profile lzm-dev
-aws s3 cp Uptown/wwwroot s3://config-uptown-$SystemGuid/wwwroot/_content/Tenancy --recursive --profile lzm-dev
+aws s3 cp Admin/wwwroot s3://config-admin-$SystemGuid/wwwroot/_content/Tenancy --recursive --profile $Profile
+aws s3 cp Consumer/wwwroot s3://config-consumer-$SystemGuid/wwwroot/_content/Tenancy --recursive --profile $Profile
+aws s3 cp Downtown/wwwroot s3://config-downtown-$SystemGuid/wwwroot/_content/Tenancy --recursive --profile $Profile
+aws s3 cp Uptown/wwwroot s3://config-uptown-$SystemGuid/wwwroot/_content/Tenancy --recursive --profile $Profile
  

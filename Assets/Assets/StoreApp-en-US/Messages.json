@@ -1,0 +1,54 @@
+﻿{
+  "DocMetaData": {
+    "Description": "StoreApp Default Messages"
+  },
+  "Messages": {
+    "Cancel": {
+      "Msg": "Cancel"
+    },
+    "snapsapp_info_header": {
+      "Msg": "snapsApp"
+    },
+    "snapsapp_info": {
+      "Msg": "The Snaps app is provided for informational and planning purposes only. "
+    },
+    "snapsapp_install_header": {
+      "Msg": "Install on Device"
+    },
+    "snapsapp_install": {
+      "Msg": "SnapsApp can be easily installed on your device homepage. On iOS, use Safari to load app, click the share button and then select Add to Home Screen. On Android, use Chrome to load app, click Install. On Windows, using Edge or Chrome, load app, open browser menu and select Install snapsApp. On MacOS, use Safari to load app, click the install button in the address bar."
+    },
+    "snapsapp_update_header": {
+      "Msg": "Update on Device"
+    },
+    "snapsapp_update": {
+      "Msg": "Close any open instances. Then reopen app from home screen."
+    },
+    "snapsapp_browser_header": {
+      "Msg": "Browser Update"
+    },
+    "snapsapp_refresh": {
+      "Msg": "To get the lastest version of the calculator in your browser, click on the refresh button. This will clear any current calculation."
+    },
+    "snapsapp_refreshbtn": {
+      "Msg": "Update App"
+    },
+    "snapsapp_copyright": {
+      "Msg": "(c) 2023 by BanquetConsulting, All Rights Reserved"
+    },
+    "snapsapp_aboutus_header": {
+      "Msg": "About Us"
+    },
+    "snapsapp_aboutus": {
+      "Msg": "snapsApp was designed by BanquetConsulting and implemented by Insight Sciences Corporation."
+    },
+    "snapsapp_name": {
+      "Msg": "snapsApp"
+    },
+    "main_reset": {
+      "Msg": "Reset all entered values in the calculator."
+    },
+    "snapsapp_latestversion": {
+      "Msg": "Latest Version"
+    }
+  }
