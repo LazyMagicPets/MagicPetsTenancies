@@ -19,7 +19,7 @@
 # Note: We use these files in our service-worker caching strategy.
 
 
-param([string]$BucketPrefix="app-assets",[string]$TenancyName="")
+param([string]$BucketPrefix="app",[string]$TenancyName="assets")
 $bucketName = ""
 if($bucketPrefix -ne "") {
 	$bucketName = $BucketPrefix + "-"
@@ -67,7 +67,11 @@ foreach ($assetCategory in $assetCategories) {
 				url = "$relativePath"
 			}
 		}
-		$manifestJson = $manifest | ConvertTo-Json -Depth 10
+		if ($manifest.count -eq 0)  {
+			$manifestJson = "[]"
+		} else {
+			$manifestJson = $manifest | ConvertTo-Json -Depth 10 -AsArray
+		}
 		
 		# Write mainifest file
 		$manifestFilePath = Join-Path -Path $assetGroup.FullName -ChildPath "assets-manifest.json"
