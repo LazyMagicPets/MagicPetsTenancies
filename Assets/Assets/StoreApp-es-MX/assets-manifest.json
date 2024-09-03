@@ -1,10 +1,10 @@
 [
   {
-    "hash": "sha256-E3B9A5F4606A82BE41BB2F029D38501D6A2A9196DDCA4015D65F4A7839C4F4D3",
-    "url": "Assets/StoreApp-es-MX/config.json"
+    "url": "Assets/StoreApp-es-MX/config.json",
+    "hash": "sha256-E3B9A5F4606A82BE41BB2F029D38501D6A2A9196DDCA4015D65F4A7839C4F4D3"
   },
   {
-    "hash": "sha256-2E4BA1357901E5F93E85CD8C8140FFCC93AD3A341E7E5C1836E9EA3520793438",
-    "url": "Assets/StoreApp-es-MX/Messages.es-MX.json"
+    "url": "Assets/StoreApp-es-MX/Messages.json",
+    "hash": "sha256-2E4BA1357901E5F93E85CD8C8140FFCC93AD3A341E7E5C1836E9EA3520793438"
   }
 ]
