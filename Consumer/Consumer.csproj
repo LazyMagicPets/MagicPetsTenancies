@@ -11,7 +11,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.4"/>
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="base\ConsumerApp\" />
+	  <Folder Include="en-US\ConsumerApp\" />
+	  <Folder Include="es-MX\ConsumerApp\" />
 	</ItemGroup>
 
 </Project>

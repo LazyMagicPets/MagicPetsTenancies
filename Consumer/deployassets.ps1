@@ -8,7 +8,7 @@
 # Note the TenancyName parameter. This is the name of the tenancy that the configuration is for.
 
 
-param([string]$BucketPrefix="config",[string]$TenancyName="demo")
+param([string]$BucketPrefix="config",[string]$TenancyName="consumer")
 $bucketName = ""
 if($bucketPrefix -ne "") {
 	$bucketName = $BucketPrefix + "-"

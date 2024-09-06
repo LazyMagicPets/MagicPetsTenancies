@@ -16,12 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Assets\ConsumerApp-en-US\" />
-    <Folder Include="Assets\ConsumerApp-es-MX\" />
-    <Folder Include="Assets\ConsumerApp\imgs\" />
-    <Folder Include="Assets\StoreApp\imgs\" />
-    <Folder Include="Assets\System-es-MX\" />
-    <Folder Include="Assets\System\imgs\" />
+    <Folder Include="base\StoreApp\imgs\" />
   </ItemGroup>
 
 </Project>
