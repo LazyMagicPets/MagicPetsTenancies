@@ -1,0 +1,18 @@
+[
+  {
+    "url": "Assets/base/StoreApp/appicon.webp",
+    "hash": "sha256-EFD1E6209DD99A88CBF7F843368B4B3A102C47AE236B615A9F0D759928FD9028"
+  },
+  {
+    "url": "Assets/base/StoreApp/config.json",
+    "hash": "sha256-A9B8FCBCD4A51D2621F630FD8C596FD1524BA7B34D9E79397833A9B8135121B9"
+  },
+  {
+    "url": "Assets/base/StoreApp/icon-192.png",
+    "hash": "sha256-0DBA506AAEBC6526F92283E8B0112B33541605FB1B4F1A49AA15344448BAC0FE"
+  },
+  {
+    "url": "Assets/base/StoreApp/icon-512.png",
+    "hash": "sha256-A04A3A77E2AA5F97E3C5389993FC3D341DCC8B4FB2712E722F008AC2BE0891B0"
+  }
+]

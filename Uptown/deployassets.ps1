@@ -7,19 +7,8 @@
 # then review the Service project AWSTemplates folder for more setup information.
 # Note the TenancyName parameter. This is the name of the tenancy that the configuration is for.
 
-# Bucket content is stored in a two level folder structure. The first level is the asset category name, 
-# the second level is asset group name.
-# Example:
-# Assets - folder is asset category name 
-#   SetsApp - folder is asset group name 
-#
-# Each asset group folder contains one or more assets and two generated files:
-# assets-manifest.json - a list of each asset under the asset group folder with a hash of the asset
-# version.json - a has of the assets-manifest.json file used to identify the version of the assets group
-# Note: We use these files in our service-worker caching strategy.
 
-
-param([string]$BucketPrefix="app-assets",[string]$TenancyName="")
+param([string]$BucketPrefix="config",[string]$TenancyName="uptown")
 $bucketName = ""
 if($bucketPrefix -ne "") {
 	$bucketName = $BucketPrefix + "-"
@@ -28,6 +17,8 @@ if($TenancyName -ne "")
 {
 	$bucketName = $bucketName + $TenancyName + "-"
 }
+$cloudFrontPrefix = "Tenancy"
+
 Import-Module powershell-yaml
 
 # Load configuration from YAML file
@@ -42,16 +33,25 @@ $config = Get-Content -Path $filePath | ConvertFrom-Yaml
 $SystemGuid = $config.SystemGuid
 $bucketName = $bucketName + $SystemGuid
 $Profile = $config.Profile
-$assetCategories = Get-ChildItem -Directory | Where-Object { 
+
+## Process each language folder. base, en-US, es-MX etc.
+## Note that base is not actually a language, but a special folder that contains assets that are shared across all languages.
+$assetLanguages = Get-ChildItem -Directory | Where-Object { 
 	$_.Name -ne "bin" -and
 	$_.Name -ne "obj"
 }
-foreach ($assetCategory in $assetCategories) {
-	$assetCategoryName = $assetCategory.Name
-	Write-Host "Processing $assetCategoryName"
-	$assetGroups = Get-ChildItem -Directory -Path $assetCategory.FullName
+foreach($assetLanguage in $assetLanguages) {
+	$assetLanguageName = $assetLanguage.Name
+	Write-Host "$assetLanguageName"
+	$assetLanguageLength = $assetLanguage.FullName.Length
+
+	$assetGroups = Get-ChildItem -Directory -Path $assetLanguage.FullName
 	foreach($assetGroup in $assetGroups) {
+		$assetGroupName = $assetGroup.Name
+		Write-Host "    $assetGroupName"
+
 		$assetGroupLength = $assetGroup.FullName.Length
+
 		$manifest = @() # start building a new manifest
 		$assets = Get-ChildItem -Path $assetGroup.FullName -Recurse | Where-Object {
 			-not $_.PSIsContainer -and
@@ -60,14 +60,18 @@ foreach ($assetCategory in $assetCategories) {
 		}
 		foreach ($asset in $assets) {
 			$hash = Get-FileHash -Path $asset.FullName -Algorithm SHA256
-			$relativePath = $asset.FullName.Substring($assetCategory.FullName.Length + 1).Replace("\", "/")
-			$relativePath = $assetCategory.Name + "/" + $relativePath
+			$relativePath = $asset.FullName.Substring($assetLanguageLength + 1).Replace("\", "/")
+			$relativePath = $cloudFrontPrefix + "/" + $assetLanguageName +"/" + $relativePath
 			$manifest += @{
 				hash = "sha256-$($hash.Hash)"
 				url = "$relativePath"
 			}
 		}
-		$manifestJson = $manifest | ConvertTo-Json -Depth 10
+		if ($manifest.count -eq 0)  {
+			$manifestJson = "[]"
+		} else {
+			$manifestJson = $manifest | ConvertTo-Json -Depth 10 -AsArray
+		}
 		
 		# Write mainifest file
 		$manifestFilePath = Join-Path -Path $assetGroup.FullName -ChildPath "assets-manifest.json"
@@ -80,7 +84,13 @@ foreach ($assetCategory in $assetCategories) {
 		Set-Content -Path $versionFilePath -Value $versioncontent
 	}
 
-	aws s3 cp $assetCategory.Name s3://$bucketName/$assetCategoryName --recursive --profile $Profile
+	aws s3 sync $assetLanguage.FullName s3://$bucketName/$cloudFrontPrefix/$assetLanguageName --profile $Profile
+
 }
+
+
+
+
+
 
  
