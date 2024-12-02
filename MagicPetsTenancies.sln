@@ -11,11 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Uptown", "Uptown\Uptown.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E6365FAC-688F-467D-A171-BE54107AE668}"
 	ProjectSection(SolutionItems) = preProject
-		deployall.ps1 = deployall.ps1
 		README.MD = README.MD
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assets", "Assets\Assets.csproj", "{72FA82C0-365E-40D7-8714-BE9B7F1B600B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "System", "System\System.csproj", "{72FA82C0-365E-40D7-8714-BE9B7F1B600B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

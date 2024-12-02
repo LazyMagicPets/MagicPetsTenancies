@@ -1,0 +1,256 @@
+﻿{
+  "DocMetaData": {
+    "Description": "LazyStack Auth Default Messages"
+  },
+  "Messages": {
+    "AppName": {
+      "Msg": "LazyStackSaaS.AdminApp"
+    },
+    "AuthProcessLabels_SignIn": {
+      "Msg": "Iniciar Sesión"
+    },
+    "AuthProcessLabels_SignUp": {
+      "Msg": "Registrarse"
+    },
+    "AuthProcessLabels_ResettingPassword": {
+      "Msg": "Restablecer Contraseña"
+    },
+    "AuthProcessLabels_UpdatingLogin": {
+      "Msg": "Actualizar Inicio de Sesión"
+    },
+    "AuthProcessLabels_UpdatingEmail": {
+      "Msg": "Actualizar Correo Electrónico"
+    },
+    "AuthProcessLabels_UpdatingPhone": {
+      "Msg": "Actualizar Teléfono"
+    },
+    "AuthProcessLabels_UpdatingPassword": {
+      "Msg": "Actualizar Contraseña"
+    },
+    "AuthProcessLabels_SignOut": {
+      "Msg": "Cerrar Sesión"
+    },
+    "AuthFormatMessages_Login01": {
+      "Msg": "El nombre de usuario debe tener al menos 8 caracteres de longitud."
+    },
+    "AuthFormatMessages_Password01": {
+      "Msg": "La contraseña debe contener al menos una letra mayúscula."
+    },
+    "AuthFormatMessages_Password02": {
+      "Msg": "La contraseña debe contener al menos una letra minúscula."
+    },
+    "AuthFormatMessages_Password03": {
+      "Msg": "La contraseña debe contener al menos un número."
+    },
+    "AuthFormatMessages_Password04": {
+      "Msg": "La contraseña debe tener al menos 8 caracteres de longitud."
+    },
+    "AuthFormatMessages_Email01": {
+      "Msg": "Ingresa una dirección de correo electrónico válida."
+    },
+    "AuthFormatMessages_Code01": {
+      "Msg": "El código debe tener seis dígitos."
+    },
+    "AuthFormatMessages_Phone01": {
+      "Msg": "Número de teléfono inválido."
+    },
+    "AuthChallengeMessages_Login": {
+      "Msg": "Ingresa tu nombre de usuario"
+    },
+    "AuthChallengeMessages_NewLogin": {
+      "Msg": "Ingresa un nuevo nombre de usuario"
+    },
+    "AuthChallengeMessages_Password": {
+      "Msg": "Ingresa tu contraseña"
+    },
+    "AuthChallengeMessages_NewPassword": {
+      "Msg": "Ingresa una nueva contraseña"
+    },
+    "AuthChallengeMessages_Email": {
+      "Msg": "Ingresa tu dirección de correo electrónico"
+    },
+    "AuthChallengeMessages_NewEmail": {
+      "Msg": "Ingresa tu nueva dirección de correo electrónico"
+    },
+    "AuthChallengeMessages_Phone": {
+      "Msg": "Ingresa tu número de teléfono móvil"
+    },
+    "AuthChallengeMessages_NewPhone": {
+      "Msg": "Ingresa tu nuevo número de teléfono móvil"
+    },
+    "AuthChallengeMessages_Code": {
+      "Msg": "Ingresa el código de autenticación"
+    },
+    "AuthAlert_AuthProcessAlreadyStarted": {
+      "Msg": "Ya se ha iniciado otro proceso de autenticación."
+    },
+    "AuthAlert_DifferentAuthProcessActive": {
+      "Msg": "Hay un proceso de autenticación diferente activo."
+    },
+    "AuthAlert_IncorrectAuthProcess": {
+      "Msg": "Llamada inválida para el proceso de autenticación actualmente activo."
+    },
+    "AuthAlert_NoActiveAuthProcess": {
+      "Msg": "No hay ningún proceso de autenticación activo."
+    },
+    "AuthAlert_AlreadySignedIn": {
+      "Msg": "Ya has iniciado sesión."
+    },
+    "AuthAlert_InternalSignInError": {
+      "Msg": "Error interno de inicio de sesión."
+    },
+    "AuthAlert_InternalSignUpError": {
+      "Msg": "Error interno de registro."
+    },
+    "AuthAlert_InternalProcessError": {
+      "Msg": "Error interno del proceso de autenticación."
+    },
+    "AuthAlert_SignUpMissingLogin": {
+      "Msg": "Intento de registro sin valor de nombre de usuario."
+    },
+    "AuthAlert_SignUpMissingPassword": {
+      "Msg": "Intento de registro sin valor de contraseña."
+    },
+    "AuthAlert_SignUpMissingEmail": {
+      "Msg": "Intento de registro sin valor de correo electrónico."
+    },
+    "AuthAlert_SignUpMissingCode": {
+      "Msg": "Intento de registro sin valor de código."
+    },
+    "AuthAlert_AuthAlreadyStarted": {
+      "Msg": "La autenticación ya ha comenzado."
+    },
+    "AuthAlert_InvalidCallToResendAsyncCode": {
+      "Msg": "Solicitud inválida para reenviar el código de autenticación."
+    },
+    "AuthAlert_AccountWithThatEmailAlreadyExists": {
+      "Msg": "Ya existe otra cuenta con ese correo electrónico."
+    },
+    "AuthAlert_RefreshUserDetailsDone": {
+      "Msg": "Actualización de los detalles del usuario completada."
+    },
+    "AuthAlert_EmailAddressIsTheSame": {
+      "Msg": "La nueva dirección de correo electrónico es la misma que la dirección de correo electrónico registrada actualmente."
+    },
+    "AuthAlert_VerifyCalledButNoChallengeFound": {
+      "Msg": "Se llamó a una verificación de desafío pero no se encontró ningún desafío actual."
+    },
+    "AuthAlert_CantRetrieveUserDetails": {
+      "Msg": "No se pueden recuperar los detalles del usuario."
+    },
+    "AuthAlert_NeedToBeSignedIn": {
+      "Msg": "Debes iniciar sesión para realizar la operación solicitada."
+    },
+    "AuthAlert_InvalidOperationWhenSignedIn": {
+      "Msg": "Debes cerrar sesión para realizar la operación solicitada."
+    },
+    "AuthAlert_UserNotFound": {
+      "Msg": "No se encontró el nombre de usuario."
+    },
+    "AuthAlert_NotConfirmed": {
+      "Msg": "No se pueden confirmar las credenciales del usuario."
+    },
+    "AuthAlert_NotAuthorized": {
+      "Msg": "El usuario no está autorizado."
+    },
+    "AuthAlert_VerifyFailed": {
+      "Msg": "La verificación del usuario falló."
+    },
+    "AuthAlert_LoginAlreadyUsed": {
+      "Msg": "Lo sentimos, ese nombre de usuario ya está en uso. Por favor, elige otro."
+    },
+    "AuthAlert_LoginMustBeSuppliedFirst": {
+      "Msg": "Primero debe proporcionarse el nombre de usuario."
+    },
+    "AuthAlert_LoginFormatRequirementsFailed": {
+      "Msg": "No se cumplen los requisitos de formato del nombre de usuario."
+    },
+    "AuthAlert_PasswordFormatRequirementsFailed": {
+      "Msg": "No se cumplen los requisitos de formato de la contraseña."
+    },
+    "AuthAlert_EmailFormatRequirementsFailed": {
+      "Msg": "El correo electrónico proporcionado no es válido."
+    },
+    "AuthAlert_PhoneFormatRequirementsFailed": {
+      "Msg": "El número de teléfono proporcionado no es válido."
+    },
+    "AuthAlert_TooManyAttempts": {
+      "Msg": "Has excedido el límite de intentos de inicio de sesión. Inténtalo de nuevo más tarde."
+    },
+    "AuthAlert_NothingToDo": {
+      "Msg": ""
+    },
+    "AuthAlert_OperationNotSupportedByAuthProvider": {
+      "Msg": "Operación no soportada por el proveedor de autenticación actual."
+    },
+    "AuthAlert_LimitExceededException": {
+      "Msg": "Demasiados intentos. Inténtalo de nuevo más tarde."
+    },
+    "AuthAlert_PasswordResetRequiredException": {
+      "Msg": "Se debe restablecer la contraseña."
+    },
+    "AuthAlert_Unknown": {
+      "Msg": "Se ha producido una alerta desconocida."
+    },
+    "AuthComponent_LoginLabel": {
+      "Msg": "Nombre de usuario"
+    },
+    "AuthComponent_NewLoginLabel": {
+      "Msg": "Nuevo nombre de usuario"
+    },
+    "AuthComponent_PasswordLabel": {
+      "Msg": "Contraseña"
+    },
+    "AuthComponent_NewPasswordLabel": {
+      "Msg": "Nueva contraseña"
+    },
+    "AuthComponent_EmailLabel": {
+      "Msg": "Correo electrónico"
+    },
+    "AuthComponent_NewEmailLabel": {
+      "Msg": "Nuevo correo electrónico"
+    },
+    "AuthComponent_PhoneLabel": {
+      "Msg": "Teléfono"
+    },
+    "AuthComponent_NewPhoneLabel": {
+      "Msg": "Nuevo teléfono"
+    },
+    "AuthComponent_CodeLabel": {
+      "Msg": "Código"
+    },
+    "AuthComponent_SignIn": {
+      "Msg": "Iniciar sesión"
+    },
+    "AuthComponent_SignUp": {
+      "Msg": "Registrarse"
+    },
+    "AuthComponent_UpdatePassword": {
+      "Msg": "Actualizar contraseña"
+    },
+    "AuthComponent_ResetPassword": {
+      "Msg": "Restablecer contraseña"
+    },
+    "AuthComponent_UpdateEmail": {
+      "Msg": "Actualizar correo electrónico"
+    },
+    "AuthCopmponent_UpdatePassword": {
+      "Msg": "Actualizar contraseña"
+    },
+    "AuthComponent_UpdatePhone": {
+      "Msg": "Actualizar teléfono"
+    },
+    "AuthComponent_SignOut": {
+      "Msg": "Cerrar sesión"
+    },
+    "AuthComponent_ResendCode": {
+      "Msg": "Reenviar código"
+    },
+    "AuthComponent_Cancel": {
+      "Msg": "Cancelar"
+    },
+    "AuthComponent_Next": {
+      "Msg": "Siguiente"
+    }
+  }
+}

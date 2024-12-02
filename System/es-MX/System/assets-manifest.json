@@ -1,0 +1,10 @@
+[
+  {
+    "hash": "sha256-9FA5534BA3327F2260C47F6E490570C1134184D2901F4247944BC0B00AFF6FFA",
+    "url": "system/es-MX/System/AuthMessages.json"
+  },
+  {
+    "hash": "sha256-D5EA53F040845AF07A8B8827D6C03246213F5BEF83345211D2BC66E627527852",
+    "url": "system/es-MX/System/Messages.json"
+  }
+]

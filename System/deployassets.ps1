@@ -8,7 +8,7 @@
 # Note the TenancyName parameter. This is the name of the tenancy that the configuration is for.
 
 
-param([string]$TenancyName="downtown",[string]$Guid)
+param([string]$TenancyName="system",[string]$Guid)
 
 Import-Module powershell-yaml
 

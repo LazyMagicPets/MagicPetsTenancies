@@ -1,0 +1,16 @@
+﻿{
+  "DocMetaData": {
+    "Description": "StoreApp Default Messages"
+  },
+  "Messages": {
+    "Cancel": {
+      "Msg": "Cancel"
+    },
+    "storeapp_info_header": {
+      "Msg": "storeapp"
+    },
+    "storeapp_info": {
+      "Msg": "The Snaps app is provided for informational and planning purposes only. "
+    }
+  }
+}

@@ -8,16 +8,7 @@
 # Note the TenancyName parameter. This is the name of the tenancy that the configuration is for.
 
 
-param([string]$BucketPrefix="config",[string]$TenancyName="uptown")
-$bucketName = ""
-if($bucketPrefix -ne "") {
-	$bucketName = $BucketPrefix + "-"
-}
-if($TenancyName -ne "")
-{
-	$bucketName = $bucketName + $TenancyName + "-"
-}
-$cloudFrontPrefix = "Tenancy"
+param([string]$TenancyName="uptown",[string]$Guid)
 
 Import-Module powershell-yaml
 
@@ -31,7 +22,12 @@ if(-not (Test-Path $filePath))
 
 $config = Get-Content -Path $filePath | ConvertFrom-Yaml
 $SystemGuid = $config.SystemGuid
-$bucketName = $bucketName + $SystemGuid
+if(-not $Guid.HasValue) {
+	$Guid = $SystemGuid
+}
+
+$SystemName = $config.SystemName
+$bucketName = $SystemName + "-assets-" + $TenancyName + "-" + $Guid
 $Profile = $config.Profile
 
 ## Process each language folder. base, en-US, es-MX etc.
@@ -61,7 +57,7 @@ foreach($assetLanguage in $assetLanguages) {
 		foreach ($asset in $assets) {
 			$hash = Get-FileHash -Path $asset.FullName -Algorithm SHA256
 			$relativePath = $asset.FullName.Substring($assetLanguageLength + 1).Replace("\", "/")
-			$relativePath = $cloudFrontPrefix + "/" + $assetLanguageName +"/" + $relativePath
+			$relativePath = $TenancyName + "/" + $assetLanguageName + "/" + $relativePath
 			$manifest += @{
 				hash = "sha256-$($hash.Hash)"
 				url = "$relativePath"
@@ -84,12 +80,9 @@ foreach($assetLanguage in $assetLanguages) {
 		Set-Content -Path $versionFilePath -Value $versioncontent
 	}
 
-	aws s3 sync $assetLanguage.FullName s3://$bucketName/$cloudFrontPrefix/$assetLanguageName --profile $Profile
+	aws s3 sync $assetLanguage.FullName s3://$bucketName/$assetLanguageName --profile $Profile
 
 }
-
-
-
 
 
 

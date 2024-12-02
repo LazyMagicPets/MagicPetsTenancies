@@ -1,0 +1,14 @@
+[
+  {
+    "hash": "sha256-4821CD0C2994199828897BBD6D670AB47156553423E63E9168D1E61EFD61ABA3",
+    "url": "system/base/System/favicon.png"
+  },
+  {
+    "hash": "sha256-0DBA506AAEBC6526F92283E8B0112B33541605FB1B4F1A49AA15344448BAC0FE",
+    "url": "system/base/System/icon-192.png"
+  },
+  {
+    "hash": "sha256-A04A3A77E2AA5F97E3C5389993FC3D341DCC8B4FB2712E722F008AC2BE0891B0",
+    "url": "system/base/System/icon-512.png"
+  }
+]
