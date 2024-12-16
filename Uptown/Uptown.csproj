@@ -15,7 +15,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="base\StoreApp\" />
 	  <Folder Include="en-US\StoreApp\" />
 	  <Folder Include="es-MX\StoreApp\" />
 	</ItemGroup>
