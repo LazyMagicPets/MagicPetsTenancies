@@ -8,7 +8,11 @@
 # Note the TenancyName parameter. This is the name of the tenancy that the configuration is for.
 
 
-param([string]$TenancyName="uptown",[string]$Guid)
+param(
+	[string]$TenantKey="mp",
+	[string]$SubtenantKey="uptown",
+	[string]$Guid
+)
 
 Import-Module powershell-yaml
 
@@ -27,7 +31,8 @@ if(-not $Guid.HasValue) {
 }
 
 $SystemName = $config.SystemName
-$bucketName = $SystemName + "-assets-" + $TenancyName + "-" + $Guid
+$bucketName = $SystemName + "-" + $TenantKey + "-" + $SubtenantKey +  "-assets-" + $Guid
+Write-Host "Bucket Name: $bucketName"
 $Profile = $config.Profile
 
 ## Process each language folder. base, en-US, es-MX etc.
