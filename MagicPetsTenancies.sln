@@ -11,6 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mp-uptown", "mp-uptown\mp-u
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E6365FAC-688F-467D-A171-BE54107AE668}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		README.MD = README.MD
 	EndProjectSection
 EndProject
