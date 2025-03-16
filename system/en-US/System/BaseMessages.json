@@ -1,0 +1,49 @@
+﻿{
+  "DocMetaData": {
+    "Description": "EventIt Default Messages"
+  },
+  "Messages": {
+    "Cancel": {
+      "Msg": "Cancel"
+    },
+    "baseapp_install_header": {
+      "Msg": "Install on Device"
+    },
+    "baseapp_install": {
+      "Msg": "The app can be easily installed on your device homepage. On iOS, use Safari to load app, click the share button and then select Add to Home Screen. On Android, use Chrome to load app, click Install. On Windows, using Edge or Chrome, load app, open browser menu and select Install SetsApp. On MacOS, use Safari to load app, click the install button in the address bar."
+    },
+    "baseapp_update_header": {
+      "Msg": "Update on Device"
+    },
+    "baseapp_refresh": {
+      "Msg": "To get the lastest version of the calculator in your browser, click on the Update App button. This will clear any current calculation."
+    },
+    "baseapp_refreshbtn": {
+      "Msg": "Update App"
+    },
+    "baseapp_copyright": {
+      "Msg": "(c) 2023-2024 by BanquetConsulting, All Rights Reserved"
+    },
+    "baseapp_aboutus_header": {
+      "Msg": "About Us"
+    },
+    "baseapp_aboutus": {
+      "Msg": "This App was designed by BanquetConsulting and implemented by Insight Sciences Corporation."
+    },
+    "baseapp_latestversion": {
+      "Msg": "Latest Version"
+    },
+    "baseapp_updatingapplication": {
+      "Msg": "Updating Application"
+    },
+    "baseapp_updatingapplicationmsg": {
+      "Msg": "Hang on, we are loading an update!"
+    },
+    "baseapp_updatingassetdata": {
+      "Msg": "Updating Asset Data"
+    },
+    "baseapp_updatingassetmsg": {
+      "Msg": "Hang on, we are loading the asset data!"
+    }
+  }
+}

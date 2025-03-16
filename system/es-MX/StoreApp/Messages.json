@@ -1,0 +1,10 @@
+{
+  "DocMetaData": {
+    "Description": "Sets Default Messages"
+  },
+  "Messages": {
+    "Cancel": {
+      "Msg": "Cancelar"
+    }
+  }
+}
