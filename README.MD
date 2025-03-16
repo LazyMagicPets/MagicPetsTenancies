@@ -13,9 +13,7 @@ This solution contains two projects for each test tenancy in the system.
 - tenancy - contains the current tenancy configuration
 - tenancy-preview - contains the preview tenancy configuration
 
-Use the deployall.ps1 script to deploy all the tenancy data to the tenancy s3 buckets.
-
-Under each tenancy project, there is a deployassets.ps1 file that can be used to independantly deploy assets in that project.
+Use the Deploy-AssetsAws powershell cmdlet to deploy assets to the tenancy S3 buckets (see LzAws module).
 
 ## Development versus Test and Production
 This solution is designed to be deployed to a development environment. Test and Production environments will often require more advanced asset management and deployment strategies.
@@ -27,12 +25,6 @@ Or, the assets in the tenancy S3 buckets might be directly managed by your appli
 Ultimately, the best approach will depend on your specific requirements. This solution is designed to be a quick and easy way to deploy assets to a development environment. 
 
 ## CloudFront distributions
-
-We create separate CloudFront distributions for the preview and current tenaqncy. For example:
-uptown.lazystackdev.click - current tenancy
-uptown-preview.lazystackdev.click - preview tenancy
-
-Tenancy users may use the preview tenancy to see changes before they are published to the current tenancy. Your application may also support the user making changes to the preview tenancy assets. 
 
 ## Assets configuration 
 
