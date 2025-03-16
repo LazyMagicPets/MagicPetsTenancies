@@ -16,7 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="base\ConsumerApp\" />
     <Folder Include="base\StoreApp\imgs\" />
+    <Folder Include="en-US\ConsumerApp\" />
+    <Folder Include="es-MX\ConsumerApp\" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties en-us_4storeapp_4messages_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
